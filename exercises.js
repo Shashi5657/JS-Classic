@@ -18,3 +18,9 @@ console.log(Math.floor(3.9));
 
 //Math.ceil always round to the highest integer such as 2.1 => 3 or 3.3 => 4
 console.log(Math.ceil(3.3));
+
+//to convert temp from cels to fahrenheit or reverse
+// fahrenheit = (celcius * 9/5) + 32
+// celcius = (fahrenheit -32) * 5/9
+let tempInCelc = 33;
+console.log(tempInCelc * (9 / 5) + 32);
