@@ -24,3 +24,6 @@ console.log(Math.ceil(3.3));
 // celcius = (fahrenheit -32) * 5/9
 let tempInCelc = 33;
 console.log(tempInCelc * (9 / 5) + 32);
+
+// \ - escape CharacterData
+// \n - new line character
