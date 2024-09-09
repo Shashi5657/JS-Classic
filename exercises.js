@@ -27,3 +27,11 @@ console.log(tempInCelc * (9 / 5) + 32);
 
 // \ - escape CharacterData
 // \n - new line character
+
+// ====> Strings
+let myName = "shashi";
+console.log(myName);
+console.log(`My name is ${myName}`);
+
+let totalCost = 5 + 3;
+console.log(`Total Cost: $${totalCost}`);
