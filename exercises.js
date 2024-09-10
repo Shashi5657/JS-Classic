@@ -35,3 +35,10 @@ console.log(`My name is ${myName}`);
 
 let totalCost = 5 + 3;
 console.log(`Total Cost: $${totalCost}`);
+console.log(`Items(${2 + 2}): ${(2 * 2095 + 2 * 799) / 100}`);
+console.log(`Shipping & handling: ${(499 + 499) / 100}`);
+let clothesTotal = (2 * 2095 + 2 * 799) / 100;
+let deliveryTotal = (499 + 499) / 100;
+console.log(`Total before tax : ${clothesTotal + deliveryTotal}`);
+let taxTotal = (clothesTotal + deliveryTotal) * 0.1;
+console.log(`Estimated tax(10%): ${taxTotal}`);
