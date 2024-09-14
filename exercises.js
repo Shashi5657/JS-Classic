@@ -42,3 +42,8 @@ let deliveryTotal = (499 + 499) / 100;
 console.log(`Total before tax : ${clothesTotal + deliveryTotal}`);
 let taxTotal = (clothesTotal + deliveryTotal) * 0.1;
 console.log(`Estimated tax(10%): ${taxTotal}`);
+
+let userName = "shashi";
+console.log(`My name is ${userName}`);
+const cost = 5 + 2 * 3 + 9;
+console.log(`Cost of Food: $${cost}`);
