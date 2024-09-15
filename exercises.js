@@ -47,3 +47,6 @@ let userName = "shashi";
 console.log(`My name is ${userName}`);
 const cost = 5 + 2 * 3 + 9;
 console.log(`Cost of Food: $${cost}`);
+
+const tax = cost * 0.1;
+console.log(`Tax: $${tax}`);
