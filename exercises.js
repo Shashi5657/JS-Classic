@@ -50,3 +50,6 @@ console.log(`Cost of Food: $${cost}`);
 
 const tax = cost * 0.1;
 console.log(`Tax: $${tax}`);
+
+const wholeCost = cost + tax;
+console.log(`total cost: $${wholeCost}`);
