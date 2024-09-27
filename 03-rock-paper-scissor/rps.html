@@ -94,7 +94,7 @@ alert(`You picked scissor. Computer picked ${computerMove}. ${result}`)
 
 <!-- below is the optimised version  -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -140,4 +140,45 @@ alert(`You picked scissor. Computer picked ${computerMove}. ${result}`)
       }
     </script>
   </body>
+</html> -->
+
+<!-- This is top level optimised  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+    <button onclick="playGame('Rock')">Rock</button>
+    <button onclick="playGame('Paper')">Paper</button>
+    <button onclick="playGame('Scissors')">Scissors</button>
+    <p id="result"></p>
+  </body>
+  <script>
+    const choices = ['Rock', 'Paper', 'Scissors'];
+
+    const playGame = (userChoice) => {
+      const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+      let result;
+
+      if (userChoice === computerChoice) {
+        result = "It's a tie!";
+      } else if (
+        (userChoice === 'Rock' && computerChoice === 'Scissors') ||
+        (userChoice === 'Paper' && computerChoice === 'Rock') ||
+        (userChoice === 'Scissors' && computerChoice === 'Paper')
+      ) {
+        result = `You win! ${userChoice} beats ${computerChoice}.`;
+      } else {
+        result = `You lose! ${computerChoice} beats ${userChoice}.`;
+      }
+
+      document.getElementById('result').textContent = result;
+    };
+  </script>
 </html>
+
