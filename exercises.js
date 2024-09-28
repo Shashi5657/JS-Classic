@@ -5,6 +5,7 @@
 // console.log(2 + 2 - 5);
 // document.body.innerHTML
 
+///****** Math methods  ******/
 let summation = 10 + 3 * 8 + 5;
 console.log(summation);
 console.log(summation / 3);
@@ -28,7 +29,7 @@ console.log(tempInCelc * (9 / 5) + 32);
 // \ - escape CharacterData
 // \n - new line character
 
-// ====> Strings
+//******** */ ====> Strings   *********///
 let myName = "shashi";
 console.log(myName);
 console.log(`My name is ${myName}`);
@@ -53,3 +54,16 @@ console.log(`Tax: $${tax}`);
 
 const wholeCost = cost + tax;
 console.log(`total cost: $${wholeCost}`);
+
+//******** */ Falsy values ****///
+//  false 0, '', Nan, undefined, null
+
+const currentDate = new Date();
+const hour = currentDate.getHours();
+if (hour > 6 && hour <= 12) {
+  console.log("Good Morning");
+} else if (hour > 12 && hour <= 17) {
+  console.log("Good Afternoon");
+} else {
+  console.log("Good Night");
+}
