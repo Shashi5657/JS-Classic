@@ -61,9 +61,9 @@ console.log(`total cost: $${wholeCost}`);
 const currentDate = new Date();
 const hour = currentDate.getHours();
 if (hour > 6 && hour <= 12) {
-  console.log("Good Morning");
+  console.log(`Good Morning ${userName}`);
 } else if (hour > 12 && hour <= 17) {
-  console.log("Good Afternoon");
+  console.log(`Good Afternoon ${userName}`);
 } else {
-  console.log("Good Night");
+  console.log(`Good Night ${userName}`);
 }
