@@ -67,3 +67,11 @@ if (hour > 6 && hour <= 12) {
 } else {
   console.log(`Good Night ${userName}`);
 }
+
+const age = 5;
+const isHoliday = true;
+if ((age < 6 || age > 65) && !isHoliday) {
+  console.log("Discount");
+} else {
+  console.log("No Discount");
+}
