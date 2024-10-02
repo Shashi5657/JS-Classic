@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <p>Heads or Tails</p>
-    <button>Heads</button>
-    <button>Tails</button>
-</body>
+    <button onclick="playGame('Heads')">Heads</button>
+    <button onclick="playGame('Tails')">Tails</button>
+  </body>
+  <script>
+    const playGame = (userChoice) => {
+      let randomNumber = Math.random();
+      const result = randomNumber > 0.5 ? "Heads" : "Tails";
+
+      if (userChoice === result) {
+        console.log("You Won");
+      } else {
+        console.log("You lose");
+      }
+    };
+  </script>
 </html>
