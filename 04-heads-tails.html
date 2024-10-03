@@ -3,23 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Heads or Tails</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
-    <p>Heads or Tails</p>
+    <h1>Heads or Tails</h1>
+    <p>Choose your option:</p>
     <button onclick="playGame('Heads')">Heads</button>
     <button onclick="playGame('Tails')">Tails</button>
+    <div id="result"></div>
   </body>
   <script>
     const playGame = (userChoice) => {
-      let randomNumber = Math.random();
+      const randomNumber = Math.random();
       const result = randomNumber > 0.5 ? "Heads" : "Tails";
 
-      if (userChoice === result) {
-        console.log("You Won");
-      } else {
-        console.log("You lose");
-      }
+      const resultMessage =
+        userChoice === result
+          ? `You Won! It was ${result}.`
+          : `You Lose! It was ${result}.`;
+
+      document.getElementById("result").innerText = resultMessage;
     };
   </script>
 </html>
