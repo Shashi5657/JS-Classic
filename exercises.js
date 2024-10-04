@@ -75,3 +75,12 @@ if ((age < 6 || age > 65) && !isHoliday) {
 } else {
   console.log("No Discount");
 }
+
+//////**** Functions *******///////
+
+const greet = (name) => {
+  console.log(`hello ${name}`);
+};
+
+greet("shashi");
+greet("vinay");
