@@ -78,9 +78,17 @@ if ((age < 6 || age > 65) && !isHoliday) {
 
 //////**** Functions *******///////
 
-const greet = (name) => {
+const greet = (name = "there") => {
   console.log(`hello ${name}`);
 };
 
 greet("shashi");
 greet("vinay");
+greet();
+
+const convertToFahrenheit = (celcius) => {
+  const fahrenheit = (celcius * 9) / 5 + 32;
+  return fahrenheit;
+};
+
+console.log(convertToFahrenheit(41));
