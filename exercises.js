@@ -92,3 +92,15 @@ const convertToFahrenheit = (celcius) => {
 };
 
 console.log(convertToFahrenheit(41));
+
+const convertLength = (length, from, to) => {
+  if (from === "km" && to === "miles") {
+    return `${length / 1.6} miles`;
+  } else if (from === "miles" && to === "km") {
+    return `${length * 1.6} km`;
+  } else if (from === to) {
+    return `${length} ${to}`;
+  }
+};
+
+console.log(convertLength(50, "km", "miles"));
