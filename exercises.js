@@ -120,12 +120,25 @@ const convertLength = (length, from, to) => {
   }
 };
 
-console.log(convertLength(50, "miles", "km"));
-console.log(convertLength(32, "km", "miles"));
-console.log(convertLength(50, "km", "km"));
+// console.log(convertLength(50, "miles", "km"));
+// console.log(convertLength(32, "km", "miles"));
+// console.log(convertLength(50, "km", "km"));
 
-console.log(convertLength(5, "miles", "km"));
-console.log(convertLength(5, "miles", "ft"));
-console.log(convertLength(5, "km", "ft"));
+// console.log(convertLength(5, "miles", "km"));
+// console.log(convertLength(5, "miles", "ft"));
+// console.log(convertLength(5, "km", "ft"));
 
-console.log(convertLength(5, "lbs", "lbs"));
+// console.log(convertLength(5, "lbs", "lbs"));
+
+//****** Objects ******//
+
+const product = {
+  name: "basketball",
+  price: 2095,
+};
+
+console.log(product);
+
+product.price += 500;
+
+console.log(product);
