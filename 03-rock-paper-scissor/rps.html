@@ -17,11 +17,17 @@
   <script>
     const choices = ["Rock", "Paper", "Scissors"];
 
-    let scores = {
+    // Retrieve scores from localStorage or initialize to 0
+    let scores = JSON.parse(localStorage.getItem("scores")) || {
       wins: 0,
       losses: 0,
       ties: 0,
     };
+
+    // Update the score display on page load
+    document.getElementById(
+      "score"
+    ).textContent = `Wins: ${scores.wins} | Losses: ${scores.losses} | Ties: ${scores.ties}`;
 
     const playGame = (userChoice) => {
       const computerChoice =
@@ -43,6 +49,10 @@
         scores.losses++;
       }
 
+      // Save scores to localStorage
+      localStorage.setItem("scores", JSON.stringify(scores));
+
+      // Update the result and score display
       document.getElementById("result").textContent = result;
       document.getElementById(
         "score"
@@ -55,6 +65,9 @@
         losses: 0,
         ties: 0,
       };
+
+      // Save the reset scores to localStorage
+      localStorage.setItem("scores", JSON.stringify(scores));
 
       // Update the score display and clear the result
       document.getElementById("result").textContent = "";
