@@ -132,13 +132,28 @@ const convertLength = (length, from, to) => {
 
 //****** Objects ******//
 
-const product = {
+const product1 = {
   name: "basketball",
-  price: 2095,
+  price: 3095,
 };
 
-console.log(product);
+const product2 = {
+  name: "volleyball",
+  price: 3000,
+};
 
-product.price += 500;
+// product.price += 500;
 
-console.log(product);
+// product["delivery-time"] = "3 days";
+
+// console.log(product1);
+
+const comparePrice = (product1, product2) => {
+  if (product1.price < product2.price) {
+    return product1;
+  } else {
+    return product2;
+  }
+};
+
+console.log(comparePrice(product1, product2));
