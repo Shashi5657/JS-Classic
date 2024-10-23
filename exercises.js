@@ -142,6 +142,11 @@ const product2 = {
   price: 3000,
 };
 
+const product3 = {
+  name: "volleyball",
+  price: 3000,
+};
+
 // product.price += 500;
 
 // product["delivery-time"] = "3 days";
@@ -156,4 +161,18 @@ const comparePrice = (product1, product2) => {
   }
 };
 
-console.log(comparePrice(product1, product2));
+// console.log(comparePrice(product1, product2));
+
+const isSameProduct = (product1, product2) => {
+  if (product1.name === product2.name && product2.price === product2.price) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(isSameProduct(product3, product2));
+
+const wish = "Happy New Year";
+
+console.log(wish.toLowerCase());
