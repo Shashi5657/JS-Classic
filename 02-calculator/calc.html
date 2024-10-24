@@ -122,27 +122,30 @@
         onclick="
     calculation = eval(calculation)
     console.log(calculation) 
+    localStorage.setItem('calculation', calculation)
        "
       >
         =
       </button>
     </p>
     <p>
-      <button
-        onclick="
-   updateCalc('')
-       "
-      >
-        clear
-      </button>
+      <button onclick="
+        calculation = '';
+        console.log(calculation);
+
+        // Remember to save the calculation here.
+        localStorage.setItem('calculation', calculation);
+      ">Clear</button>
+    </p>
     </p>
   </body>
   <script>
-    let calculation = "";
+    let calculation = localStorage.getItem("calculation") || "";
 
     const updateCalc = (value) => {
       calculation += value;
       console.log(calculation);
+      localStorage.setItem("calculation", calculation);
     };
   </script>
 </html>

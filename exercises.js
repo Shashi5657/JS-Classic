@@ -171,8 +171,9 @@ const isSameProduct = (product1, product2) => {
   }
 };
 
-console.log(isSameProduct(product3, product2));
+// console.log(isSameProduct(product3, product2));
 
-const wish = "Happy New Year";
+const wish = "Happy New Year. ";
 
-console.log(wish.toLowerCase());
+// console.log(wish.toLowerCase());
+console.log(wish.repeat(3));
