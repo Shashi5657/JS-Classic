@@ -31,6 +31,10 @@
     <div id="result"></div>
   </body>
   <script>
+    let score = JSON.parse(localStorage.getItem("score")) || {
+      wins: 0,
+      losses: 0,
+    };
     const playGame = (userChoice) => {
       const randomNumber = Math.random();
       const result = randomNumber > 0.5 ? "Heads" : "Tails";
@@ -39,6 +43,14 @@
         userChoice === result
           ? `You Won! It was ${result}.`
           : `You Lose! It was ${result}.`;
+
+      if (userChoice === result) {
+        score.wins += 1;
+      } else {
+        score.losses += 1;
+      }
+      localStorage.setItem("score", JSON.stringify(score));
+      console.log(score);
 
       document.getElementById("result").innerText = resultMessage;
     };
