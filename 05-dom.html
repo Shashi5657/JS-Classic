@@ -7,12 +7,16 @@
   </head>
   <body>
     <p>Youtube Subscribe Button</p>
-    <button onclick="handleClick()">Subscribe</button>
+    <button class="firstButton" onclick="handleClick()">Subscribe</button>
   </body>
   <script>
-    const buttonElement = document.querySelector("button");
+    const buttonElement = document.querySelector(".firstButton");
     const handleClick = () => {
-      buttonElement.innerHTML = "subscribed";
+      if (buttonElement.innerText === "subscribe") {
+        buttonElement.innerHTML = "subscribed";
+      } else {
+        buttonElement.innerHTML = "subscribe";
+      }
     };
   </script>
 </html>
