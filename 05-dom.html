@@ -8,6 +8,13 @@
   <body>
     <p>Youtube Subscribe Button</p>
     <button class="firstButton" onclick="handleClick()">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Order under $40 = +$10 shipping</p>
+    <p>Order over $40 = Free shipping</p>
+    <input type="number" class="inputField" />
+    <button onclick="calculate()">Calculate</button>
+    <p class="textValue"></p>
   </body>
   <script>
     const buttonElement = document.querySelector(".firstButton");
@@ -17,6 +24,18 @@
       } else {
         buttonElement.innerHTML = "subscribe";
       }
+    };
+
+    const inputField = document.querySelector(".inputField");
+    const textField = document.querySelector(".textValue");
+
+    const calculate = (value) => {
+      if (value < 40) {
+        return (value += 10);
+      } else {
+        return value;
+      }
+      textField.innerHTML = value;
     };
   </script>
 </html>
