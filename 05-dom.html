@@ -26,16 +26,15 @@
       }
     };
 
-    const inputField = document.querySelector(".inputField");
-    const textField = document.querySelector(".textValue");
-
-    const calculate = (value) => {
-      if (value < 40) {
-        return (value += 10);
-      } else {
-        return value;
+    const calculate = () => {
+      const inputField = document.querySelector(".inputField");
+      let inputValue = parseFloat(inputField.value);
+      console.log(inputValue, "value");
+      const textField = document.querySelector(".textValue");
+      if (inputValue < 40) {
+        inputValue += 10; // Add 10 to inputValue
       }
-      textField.innerHTML = value;
+      textField.innerHTML = inputValue; // Update text regardless of the condition
     };
   </script>
 </html>
