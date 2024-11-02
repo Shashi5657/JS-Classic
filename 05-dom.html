@@ -12,7 +12,14 @@
     <p>Amazon Shipping Calculator</p>
     <p>Order under $40 = +$10 shipping</p>
     <p>Order over $40 = Free shipping</p>
-    <input type="number" class="inputField" />
+    <input
+      class="inputField"
+      onkeydown="
+      console.log(event)
+       if(event.key === 'Enter'){
+        calculate()
+    }"
+    />
     <button onclick="calculate()">Calculate</button>
     <p class="textValue"></p>
   </body>
@@ -28,7 +35,7 @@
 
     const calculate = () => {
       const inputField = document.querySelector(".inputField");
-      let inputValue = parseFloat(inputField.value);
+      let inputValue = parseInt(inputField.value);
       console.log(inputValue, "value");
       const textField = document.querySelector(".textValue");
       if (inputValue < 40) {
