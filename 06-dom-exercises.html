@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>9a</button>
+    <button class="secondButton">9b</button>
+    <button onclick="headsClick()">heads</button>
+    <button onclick="tailsClick()">tails</button>
+    <p class="textarea"></p>
+  </body>
+  <script>
+    const buttonElement = document.querySelector("button");
+    const secondButton = document.querySelector(".secondButton");
+    secondButton.innerHTML = "9b done!";
+    console.log(buttonElement);
+    const headsClick = () => {
+      const paraField = document.querySelector(".textarea");
+      paraField.innerHTML = "You chose heads";
+    };
+    const tailsClick = () => {
+      const paraField = document.querySelector(".textarea");
+      paraField.innerHTML = "You chose tails";
+    };
+  </script>
+</html>
