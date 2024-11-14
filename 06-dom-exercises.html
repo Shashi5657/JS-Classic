@@ -6,24 +6,33 @@
     <title>Document</title>
   </head>
   <body>
-    <button>9a</button>
+    <!-- <button>9a</button>
     <button class="secondButton">9b</button>
     <button onclick="headsClick()">heads</button>
     <button onclick="tailsClick()">tails</button>
-    <p class="textarea"></p>
+    <p class="textarea"></p> -->
+    <input class="inputField" />
+    <button onclick="handleSubit()" class="submitButton">Submit</button>
+    <p class="displayText"></p>
   </body>
   <script>
-    const buttonElement = document.querySelector("button");
-    const secondButton = document.querySelector(".secondButton");
-    secondButton.innerHTML = "9b done!";
-    console.log(buttonElement);
-    const headsClick = () => {
-      const paraField = document.querySelector(".textarea");
-      paraField.innerHTML = "You chose heads";
+    const handleSubit = () => {
+      const InputField = document.querySelector(".inputField");
+      let inputValue = InputField.value;
+      const displayText = document.querySelector(".displayText");
+      displayText.innerHTML = `Your name is ${inputValue}`;
     };
-    const tailsClick = () => {
-      const paraField = document.querySelector(".textarea");
-      paraField.innerHTML = "You chose tails";
-    };
+    // const buttonElement = document.querySelector("button");
+    // const secondButton = document.querySelector(".secondButton");
+    // secondButton.innerHTML = "9b done!";
+    // console.log(buttonElement);
+    // const headsClick = () => {
+    //   const paraField = document.querySelector(".textarea");
+    //   paraField.innerHTML = "You chose heads";
+    // };
+    // const tailsClick = () => {
+    //   const paraField = document.querySelector(".textarea");
+    //   paraField.innerHTML = "You chose tails";
+    // };
   </script>
 </html>
