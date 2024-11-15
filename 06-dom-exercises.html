@@ -11,7 +11,12 @@
     <button onclick="headsClick()">heads</button>
     <button onclick="tailsClick()">tails</button>
     <p class="textarea"></p> -->
-    <input class="inputField" />
+    <input
+      class="inputField"
+      onkeydown="if(event.key === 'Enter'){
+        handleSubit()
+    }"
+    />
     <button onclick="handleSubit()" class="submitButton">Submit</button>
     <p class="displayText"></p>
   </body>
